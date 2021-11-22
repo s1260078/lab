@@ -1,0 +1,89 @@
+<!-- respect from: https://qiita.com/zaburo/items/5091041a5afb2a7dffc8 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./static/css/main.css">
+        <title>
+            {{ Test }}
+        </title>
+        <!--  <script src="./static/js/node_modules/chart.js/dist/chart.min.js"></script> -->
+        <script src="./static/js/main.js"></script>
+        <script src="./static/js/chart.min.js"></script>
+        <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    </head>
+    <body>
+    {% block content %}
+    <!-- <h2>T</h2> -->
+    <!-- <form action="/test" method="post"> -->
+    <form action="" method="post">
+        <p>Name of data <input type = "text" name = "name" /></p>
+        <p>Month
+            <p><input type = "text" name = "month" class = "month"/></p>
+            <p><input type = "text" name = "month" class = "month"/></p>
+            <p><input type = "text" name = "month" class = "month"/></p>
+            <p><input type = "text" name = "month" class = "month"/></p>
+            <p><input type = "text" name = "month" class = "month"/></p>
+            
+        </p>
+        <p>Value
+            <p><input type ="number" name = "value" class = "value"/></p>
+            <p><input type ="number" name = "value" class = "value"/></p>
+            <p><input type ="number" name = "value" class = "value"/></p>
+            <p><input type ="number" name = "value" class = "value"/></p>
+            <p><input type ="number" name = "value" class = "value"/></p>
+        </p>
+        <p>
+            <input type = "submit" value = "submit" />
+            <input type="reset" value="reset">
+        </p>
+    </form>
+    
+    <div class="box1">
+        <p>{{result}}</p>
+    </div>
+    <canvas id="mycanvas" width="50" height="50"></canvas>
+    <script>dispGraph();</script>
+    <!-- <script src="./static/js/main.js"></script> -->
+    <!-- <script>
+        var numbers = [];
+
+        var inputs = document.getElementsByClassName("value");
+
+        for (var i = 0; i < inputs.length; i++) {
+          const idx = i;
+          numbers.push(inputs[i].value);
+          inputs[i].addEventListener("change", function(e) {
+            numbers[idx] = e.target.value;
+            console.log(idx);
+            chart.update();
+          });
+        }
+
+        var ctx = document.getElementById("mycanvas");
+        var chart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: ["n0", "n1", "n2", "n3", "n4", "n5"],
+            datasets: [{
+              label: 'label here',
+              data: numbers,
+              borderWidth: 1,
+              lineTension: 0.03
+            }]
+          },
+          options: {
+            responsiveAnimationDuration: 1000,
+            responsive: false,
+            scale: {
+              ticks: {
+                suggestedMin: 0,
+                suggestedMax: 15
+              }
+            }
+          }
+        });
+
+    </script>> -->
+    {% endblock %}
+    </body>
+</html> 

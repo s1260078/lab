@@ -1,0 +1,42 @@
+入力した値からグラフを作成するためにchart.jsを利用した。
+https://www.webcreatorbox.com/tech/chart-javascript
+https://qiita.com/Haruka-Ogawa/items/59facd24f2a8bdb6d369
+https://www.tohoho-web.com/ex/chartjs.html
+
+chart.jsをダウンロードして自分のpcから読み込むようにしたが、chart.js内のjsファイルと自作の
+jsファイルがflaskで起動したサーバーでは反映されなかった。そもそもファイルが
+読み込まれていないように見える。(https://cdnjs.com/libraries/Chart.jsから読み込んで、
+htmlファイル内に直接scriptを書く方法は上手くいった。)
+"GET /node_modules/chart.js/dist/chart.min.js HTTP/1.1" 404 -
+"GET /main.js HTTP/1.1" 404 -
+
+/static/js/というディレクトリを作りそこにjsファイルをまとめてscriptタグで参照したところ、
+読み込むことができた。また、chart.jsないのjsファイルは他のディレクトリに移しても利用できることが
+分かった。また、
+"GET /static/js/chart.min.js HTTP/1.1" 304 -
+"GET /static/js/main.js HTTP/1.1" 304 -
+https://max999blog.com/python-flask-import-css-javascript/
+
+データを入力語後にページを移動せずそのままグラフや文章の表示をしたいため、form action=""もしくはform action="自身のURL"にするようにした。また、自身のURLを
+入力する場合プログラムが上手く実行されないこともあるらしいため、プログラムを動かしながら様子を
+みてどちらでやるか決める。
+https://watsunblog.com/form-action-self/#formURL
+
+javascriptファイルの中に関数を作り、htmlファイルで呼び出せるようにした。
+
+pythonファイルで処理した文章をhtmlに送るためにrender_templateを用いるといちいち読み込みが
+入ってしまうのが不快なためこれを使わない方法を探す。
+
+html->python->javascript->htmlのようにする。
+
+htmlで入力されたデータをpythonで処理して、toJSONを用いて何とかjavascriptに処理結果を
+保存し、innerHTMLで直接結果タブのところに出力したい。
+
+
+
+
+
+
+棒グラフと折れ線グラフ２つの表示切替をできるようにしたい。
+
+入力した値はなんとかファイルに記録して、submit後にも利用できるようにする。

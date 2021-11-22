@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+This is input.html<br>
+Copy & Paste this text to debug.<br>
+<h1>This is test text from web browser.</h1>
+<form action="/show" method="post">
+    <input type="text" name="test_a">
+    <input type="submit" value="test_calc">
+</form>
+{% endblock %}

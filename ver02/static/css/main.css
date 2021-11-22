@@ -1,0 +1,68 @@
+.showGraph {
+	flex:1;
+    padding: 0.5em 1em;
+    margin: 1em 1em;
+ /*   margin-left: 450px;*/
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+
+.twoBox{
+	display: flex;
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+/*	border: solid 1px black;*/
+}
+
+.monthBox{
+	flex:1;
+/*	margin-right: 2.5%;
+            margin-left: 2.5%;*/
+}
+
+.valueBox{
+	flex:1;
+/*	margin-right: 2.5%;
+            margin-left: 2.5%;*/
+}
+
+.inputBox{
+	display: flex;
+	border: solid 1px black;
+	padding: 5px;
+	width: 400px;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.appLayout{
+/*    padding-top: 10px;
+    padding-left: 50px;*/
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.result{
+	padding: 10px;
+	border: solid 3px #000000;
+}
+
+form{
+	width: 50%;
+}
+
+/*body {padding-left: 15em; padding-right: 15em; }*/
+div.allpage{width:1200px;}
+
+
+input{font-size:0.9em;}
+
+/*参考　
+	枠 	https://saruwakakun.com/html-css/reference/box
+	仕組み　
+		https://nulab.com/ja/blog/nulab/css-basics-for-engineer-boxmodel/
+		http://www.htmq.com/csskihon/301.shtml
+		https://techacademy.jp/magazine/9647#ta-toc-2
+*/
